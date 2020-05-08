@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import request from 'superagent';
 import List from './List.js';
 
-export default class herbs extends Component {
+export default class Herbs extends Component {
     state = {
         loading: true
     }
