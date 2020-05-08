@@ -6,9 +6,10 @@ export default class herbs extends Component {
     state = {
         loading: true
     }
+
     async componentDidMount() {
         const data = await request.get('https://still-plateau-72252.herokuapp.com/herbs');
-        this.setState({mushrooms: data.body, loading: false})
+        this.setState({herbs: data.body, loading: false})
     }
     render() {
         return (
