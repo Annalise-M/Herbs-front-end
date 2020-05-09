@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
     BrowserRouter as Router,
     Route,
@@ -6,7 +6,8 @@ import {
 } from "react-router-dom";
 import Herbs from './Herbs.js';
 import About from './AboutPage.js';
-// import HerbsDetailPage from './HerbsDetailPage.js';
+import HerbsDetailPage from './HerbsDetailPage.js';
+
 
 export default class App extends Component {
     render() {
@@ -19,12 +20,12 @@ export default class App extends Component {
                             exact
                             render={(routerProps) => <Herbs {...routerProps} />} 
                         />
-                        {/* <Route 
-                            path='/Herbs/:Herbs'
-                            render={(routerProps) => <HerbsDetail {...routerProps} />} 
-                        /> */}
                         <Route 
-                            path='/about'
+                            path='/HerbsDetailPage/:Herbs'
+                            render={(routerProps) => <HerbsDetailPage {...routerProps} />} 
+                        />
+                        <Route 
+                            path='/About'
                             render={(routerProps) => <About {...routerProps} />} 
                         />
                     </Switch>
