@@ -5,7 +5,7 @@ export default class List extends Component {
     render() {
         return (
             <div>
-                {this.props.data.map(item => {
+                {this.props.item.map(item => {
                     return <ListItem herb={item} />
                 })}
             </div>

@@ -4,7 +4,7 @@ import List from './List.js';
 
 export default class Herbs extends Component {
     state = {
-        loading: true
+        loading: false
     }
 
     async componentDidMount() {

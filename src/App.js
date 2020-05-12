@@ -8,6 +8,7 @@ import Herbs from './Herbs.js';
 import About from './AboutPage.js';
 import HerbsDetailPage from './HerbsDetailPage.js';
 
+//add new herb link / search form component
 
 export default class App extends Component {
     render() {
@@ -21,7 +22,7 @@ export default class App extends Component {
                             render={(routerProps) => <Herbs {...routerProps} />} 
                         />
                         <Route 
-                            path='/HerbsDetailPage/:Herbs'
+                            path='/HerbsDetailPage/:herbs'
                             render={(routerProps) => <HerbsDetailPage {...routerProps} />} 
                         />
                         <Route 
