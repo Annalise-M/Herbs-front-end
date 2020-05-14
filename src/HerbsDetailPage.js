@@ -15,6 +15,10 @@ export default class App extends Component {
             <div>
                 <h3>
                 Here's my detail page!
+                {/* do I need to add the following? 
+                <script type="" src="/herbs/herbsDetailPage.js"></script> 
+                but as a user/auth selected herb out of all herbs...?
+                */}
                 </h3>
             </div>
         )

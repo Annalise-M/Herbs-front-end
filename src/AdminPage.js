@@ -15,31 +15,57 @@ export default class AdminPage extends Component {
         e.preventDefault();
     }
 
+    handleNameChange = (e) => {
+        this.setState({ form: { name: e.target.value }})
+    }
+
+    handleKingdomChange = (e) => {
+        this.setState({ form: { kingdom: e.target.value }})
+    }
+
+    handleTypeSpeciesChange = (e) => {
+        this.setState({ form: { type_species: e.target.value }})
+    }
+
+    handleCoolFactorChange = (e) => {
+        this.setState({ form: { cool_factor: e.target.value }})
+    }
+
+    handlePoisonousChange = (e) => {
+        this.setState({ form: { poisonous: e.target.value }})
+    }
+
     render() {
+        console.log(this.state.form);
         return (
             <div className="form-container">
                 <form onSubmit={this.handleSubmit}>
                     <h3>Herbs</h3>
                     <label>
                         Name:
-                        <input name="name" />
+                        <input onChange={this.handleNameChange} value={this.state.form.name} name="name" />
                     </label>
                     <label>
                         Kingdom:
-                        <input kingdom="kingdom" />
+                        <input onChange={this.handleKingdomChange} value={this.state.form.kingdom} name="kingdom" />
                     </label>
                     <label>
                         Species:
-                        <input type_species="type_species" />
+                        <input onChange={this.handleTypeSpeciesChange} value={this.state.form.type_species} name="type_species" />
                     </label>
                     <label>
                         Cool Factor:
-                        <input cool_factor="cool_factor" />
+                        <input onChange={this.handleCoolFactorChange} value={this.state.form.cool_factor} name="cool_factor" />
                     </label>
                     <label>
-                        Poisonous:
-                        <input poisonous="poisonous" />
+                        Is it poisonous?
+                        <input onChange={this.handlePoisonousChange} checked={this.state.form.poisonous === true} name="name" type="radio" value="true" />
                     </label>
+                    <label>
+                        Is it Not poisonous?
+                        <input onChange={this.handlePoisonousChange} checked={this.state.form.poisonous === 'false'} name="name" type="radio" value="false" />
+                    </label>
+                    <button>Submit</button>
                 </form>
                 
             </div>
