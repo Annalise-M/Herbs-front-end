@@ -17,6 +17,7 @@ export default class App extends Component {
                 Here's my detail page!
                 {/* do I need to add the following? 
                 <script type="" src="/herbs/herbsDetailPage.js"></script> 
+                this.props.history.push('/')
                 but as a user/auth selected herb out of all herbs...?
                 */}
                 </h3>
